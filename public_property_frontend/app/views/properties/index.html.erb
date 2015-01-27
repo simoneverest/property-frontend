@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<%= @properties %>
 <h1>Listing Properties</h1>
 
-<%= @properties %>
+<table>
+  <tr>
+    <td>street</td>
+    <td>postcode</td>
+  </tr>
+
+  <% @properties.each do |property|%>
+  <tr>
+    <td><%= property[:street]%></td>
+    <td><%= property[:postcode]%></td>
+  </tr>
+  <%end%>
+</table>
