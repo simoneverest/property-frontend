@@ -10,6 +10,9 @@ gem 'govuk_template'
 # rest client gem for handling our api requests
 gem 'rest-client'
 
+# gem for Gov.uk styling
+gem 'slimmer'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
