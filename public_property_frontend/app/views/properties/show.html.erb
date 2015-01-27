@@ -1,4 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div id='wrapper'
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+  <%= @property[:address] %><br/>
+  <%= @property[:property_type] %><br/>
+  <%= @property[:price_paid_info][:price] %><br/>
+  <%= @property[:price_paid_info][:date] %><br/>
+  <%= @property[:council_info][:name] %><br/>
+  <%= @property[:council_info][:url] %><br/>
+  <%= @property[:coordinates][:latitude] %><br/>
+  <%= @property[:coordinates][:longitude] %><br/>
+
+</div>
