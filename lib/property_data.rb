@@ -17,7 +17,7 @@ class PropertyData
   end
 
   def format_property_json(property_json)
-    coordinates = property_json.fetch("coordinates")
+    coordinates = property_json["coordinates"]
     {
       :address => format_address(property_json),
       :property_type => property_json["property_type"],
