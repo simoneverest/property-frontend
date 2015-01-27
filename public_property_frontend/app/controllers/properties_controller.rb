@@ -9,8 +9,8 @@ class PropertiesController < ApplicationController
     #rest_resource = RestClient::Resource.new(uri) # It will create new rest-client resource so that we can call different methods of it
     #properties = rest_resource.get # will get back you all the detail in json format, but it will we wraped as string, so we will parse it in the next step.
     properties = {
-      :street  => 'Murhill Lane',
-      :postcode => 'PL9 7FN',
+      "street"  => 'Murhill Lane',
+      "postcode" => 'PL9 7FN',
     }.to_json
     @properties = JSON.parse(properties, :symbolize_names => true) # we will convert the return data into array of hash.see json data parsing here
   end
