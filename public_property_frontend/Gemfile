@@ -3,6 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+
+# This is to consume json api/ get http requests.  Currently using faraday over httparty.
+gem 'faraday'
+# this is for dealing with the rest/api client
+gem 'rest-client'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
