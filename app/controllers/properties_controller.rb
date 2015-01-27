@@ -1,8 +1,8 @@
 class PropertiesController < ApplicationController
-  require 'land_registry_api'
+  require 'property_data'
 
   def show
-    api = LandRegistryApi.new
-    @property = api.get(params[:postcode], params[:address_string])
+    data_repository = PropertyData.new
+    @property = data_repository.get(params[:postcode], params[:address_string])
   end
 end
