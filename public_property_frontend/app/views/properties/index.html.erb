@@ -1,18 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div id='wrapper'
+  <p id="notice"><%= notice %></p>
 
-<%= @properties %>
-<h1>Listing Properties</h1>
+  <h1>Listing Properties</h1>
 
-<table>
-  <tr>
-    <td>street</td>
-    <td>postcode</td>
-  </tr>
-
-  <% @properties.each do |property|%>
-  <tr>
-    <td><%= property[:street]%></td>
-    <td><%= property[:postcode]%></td>
-  </tr>
-  <%end%>
-</table>
+  <%= @properties[:street] %>
+  <%= @properties[:postcode] %>
+  
+</div>
