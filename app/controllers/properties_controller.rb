@@ -1,11 +1,8 @@
 class PropertiesController < ApplicationController
-  require 'property_data'
-  require 'api_client'
-  require 'rest_client'
+  require 'land_registry_api'
 
   def show
-    api_client = ApiClient.new(Rails.application.config.property_title_api_url)
-    data_repository = PropertyData.new(api_client)
-    @property = data_repository.find(params[:postcode], params[:address_string])
+    api = LandRegistryApi.new
+    @property = api.get(params[:postcode], params[:address_string])
   end
 end
