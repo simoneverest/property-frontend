@@ -1,11 +1,53 @@
-<div id='wrapper'
+<div id='page-container'>
+
   <p id="notice"><%= notice %></p>
 
-  <%= @property[:address] %><br/>
-  <%= @property[:property_type] %><br/>
-  <%= @property[:price_paid_info][:price] %><br/>
-  <%= @property[:price_paid_info][:date] %><br/>
-  <%= @property[:coordinates][:latitude] %><br/>
-  <%= @property[:coordinates][:longitude] %><br/>
+  <div class="grid-row">
+
+    <div class="property_details">
+
+      <h2>Property Details</h2>
+
+      <%= @property[:address] %><br/>
+      <%= @property[:property_type] %><br/>
+      <%= @property[:price_paid_info][:price] %><br/>
+      <%= @property[:price_paid_info][:date] %><br/>
+      <%= @property[:coordinates][:latitude] %><br/>
+      <%= @property[:coordinates][:longitude] %><br/>
+    </div>
+
+    <div class="mapping">
+      blah
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+
+    <div class="banner">
+      a banner goes here
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+
+    <div class="council_stuff">
+      BIN DAY
+    </div>
+
+    <div class="council_stuff">
+      LOCAL SCHOOLS
+    </div>
+
+    <div class="council_stuff">
+      DOCTORS
+    </div>
+
+    <div class="council_stuff">
+      MOAR STUFF
+    </div>
+
+  </div>
 
 </div>
