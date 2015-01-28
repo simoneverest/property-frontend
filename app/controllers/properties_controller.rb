@@ -3,6 +3,6 @@ class PropertiesController < ApplicationController
 
   def show
     data_repository = PropertyData.new
-    @property = data_repository.get(params[:postcode], params[:address_string])
+    @property = data_repository.find(params[:postcode], params[:address_string])
   end
 end

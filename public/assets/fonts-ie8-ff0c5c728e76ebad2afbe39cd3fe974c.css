@@ -1,0 +1,31 @@
+/* The below comment needs a ! so that the copyright message doesn't get removed during the minification step. See: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#comments */
+
+/*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
+
+
+
+@font-face {
+  font-family: 'nta';
+  src: url(/assets/fonts/NTA-Light-20130221-6c9de546a27d00227fb95f2bed5e5840.eot#) format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nta';
+  src: url(/assets/fonts/NTA-Bold-20130221-a97df593c651f6089a63316e589fc3ec.eot#) format('embedded-opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ntatabularnumbers';
+  src: url(/assets/fonts/NTATabularNumbers-Light-f61452c626aa999ee9e3d43f5b9ef84f.eot#) format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ntatabularnumbers';
+  src: url(/assets/fonts/NTATabularNumbers-Bold-628486c82aa271d6549d79ebf5295fd2.eot#) format('embedded-opentype');
+  font-weight: bold;
+}
