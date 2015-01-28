@@ -7,6 +7,9 @@ gem 'rails', '4.2.0'
 gem 'govuk_frontend_toolkit', :git => "https://github.com/alphagov/govuk_frontend_toolkit_gem.git", :submodules => true
 gem 'govuk_template'
 
+# rest client gem for handling our api requests
+gem 'rest-client'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -45,4 +48,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # unit testing via rspec
+  gem 'rspec-rails', '~>3.0'
+
+  gem 'pry'
 end
