@@ -3,13 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-# This is to consume json api/ get http requests.  Currently using faraday over httparty.
-gem 'faraday'
-# this is for dealing with the rest/api client
-gem 'rest-client'
+# for the gov.uk styling
+gem 'govuk_frontend_toolkit', :git => "https://github.com/alphagov/govuk_frontend_toolkit_gem.git", :submodules => true
+gem 'govuk_template'
 
-# gem for Gov.uk styling
-gem 'slimmer'
+# rest client gem for handling our api requests
+gem 'rest-client'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -49,4 +48,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # unit testing via rspec
+  gem 'rspec-rails', '~>3.0'
+
+  gem 'pry'
 end
