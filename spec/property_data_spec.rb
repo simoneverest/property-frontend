@@ -10,13 +10,13 @@ describe PropertyData do
       "town" => "Plymouth"
     }
   }
-  let(:postcode) { "testpostcode" }
+  let(:postcode) { "PL9 8TB" }
   let(:address_string) { "testaddressstring"}
 
   it "calls the property API with the postcode and address string" do
     property_data = described_class.new(api_client)
     property_data.find(postcode, address_string)
-    expect(api_client).to have_received(:get).with("properties/testpostcode/testaddressstring")
+    expect(api_client).to have_received(:get).with("/properties/PL9%208TB/testaddressstring")
   end
 
   it "formats the address in a correct way" do
