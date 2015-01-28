@@ -10,9 +10,6 @@ class PropertyData
     format_property_json(property_json)
   end
 
-  def hello
-  end
-
   private
 
   def get_property_json(postcode, address_string)
@@ -20,18 +17,13 @@ class PropertyData
   end
 
   def format_property_json(property_json)
-    coordinates = property_json["coordinates"]
-    result = {
+    coordinates = property_json.fetch("coordinates")
+    {
       :address => format_address(property_json),
       :property_type => property_json["property_type"],
       :price_paid_info => {:price => property_json["amount"], :date => property_json["date"]},
+      :coordinates => {:latitude => coordinates["latitude"], :longitude => coordinates["longitude"]},
     }
-    if coordinates
-      result.merge(
-        :coordinates => {:latitude => coordinates["latitude"], :longitude => coordinates["longitude"]}
-      )
-    end
-    result
   end
 
   def format_address(property_json)
