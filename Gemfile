@@ -7,14 +7,8 @@ gem 'rails', '4.2.0'
 gem 'govuk_frontend_toolkit', :git => "https://github.com/alphagov/govuk_frontend_toolkit_gem.git", :submodules => true
 gem 'govuk_template'
 
-gem 'govuk_template'
-
 # rest client gem for handling our api requests
 gem 'rest-client'
-
-# gem for Gov.uk styling
-gem 'slimmer'
-
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -59,7 +53,6 @@ group :development, :test do
   gem 'rspec-rails', '~>3.0'
 
   gem 'pry'
-
   # Adding SimpleCov to provide coverage of Unit Testing
   gem 'simplecov', :require => false
 
