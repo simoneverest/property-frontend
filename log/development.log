@@ -2298,3 +2298,491 @@ Errno::ECONNREFUSED (Connection refused - connect(2) for "localhost" port 4000):
   Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
   Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
   Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
+
+
+Started GET "/properties/stuff/stuff" for ::1 at 2015-01-28 16:10:48 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"stuff", "address_string"=>"stuff"}
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `land_registry_api_url' for #<Rails::Application::Configuration:0x007fc2b4339310>):
+  app/controllers/properties_controller.rb:7:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/properties/stuff/stuff" for ::1 at 2015-01-28 16:11:54 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"stuff", "address_string"=>"stuff"}
+Completed 500 Internal Server Error in 22ms
+
+URI::InvalidURIError (the scheme http does not accept registry part: landregistry.local:8001properties (or bad hostname?)):
+  lib/api_client.rb:9:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (22.1ms)
+
+
+Started GET "/properties/stuff/stuff" for ::1 at 2015-01-28 16:12:29 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"stuff", "address_string"=>"stuff"}
+Completed 500 Internal Server Error in 20ms
+
+URI::InvalidURIError (the scheme http does not accept registry part: landregistry.local:8001properties (or bad hostname?)):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+
+
+Started GET "/properties/stuff/stuff" for ::1 at 2015-01-28 16:13:06 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"stuff", "address_string"=>"stuff"}
+Completed 500 Internal Server Error in 80192ms
+
+RestClient::RequestTimeout (Request Timeout):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (21.3ms)
+
+
+Started GET "/properties/stuff/stuff" for ::1 at 2015-01-28 16:14:26 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"stuff", "address_string"=>"stuff"}
+Completed 500 Internal Server Error in 80189ms
+
+RestClient::RequestTimeout (Request Timeout):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:15:47 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+Completed 500 Internal Server Error in 13ms
+
+URI::InvalidURIError (bad URI(is not URI?): http://landregistry.local:8001/properties/PL9 8TB/southernway_43):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:16:31 +0000
+Processing by PropertiesController#show as */*
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+Completed 500 Internal Server Error in 20ms
+
+URI::InvalidURIError (bad URI(is not URI?): http://landregistry.local:8001/properties/PL9 8TB/southernway_43):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:17:54 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+Completed 500 Internal Server Error in 20ms
+
+URI::InvalidURIError (bad URI(is not URI?): http://landregistry.local:5000/properties/PL9 8TB/southernway_43):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.4ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:19:00 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+Completed 500 Internal Server Error in 20ms
+
+URI::InvalidURIError (bad URI(is not URI?): http://localhost:5000/properties/PL9 8TB/southernway_43):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:18:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:21:54 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+Completed 500 Internal Server Error in 22ms
+
+URI::InvalidURIError (bad URI(is not URI?): http://localhost:5000/properties/PL9 8TB/southernway_43):
+  lib/api_client.rb:10:in `get'
+  lib/property_data.rb:15:in `get_property_json'
+  lib/property_data.rb:8:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.1ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:31:55 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 647ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__482274144835484954_70188639578560'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (18.8ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:35:31 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 902ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__482274144835484954_70188639578560'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:35:38 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 493ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__482274144835484954_70188639578560'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (20.9ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_44" for ::1 at 2015-01-28 16:35:41 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_44"}
+  Rendered properties/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 600ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__482274144835484954_70188639578560'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_44" for ::1 at 2015-01-28 16:35:59 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_44"}
+  Rendered properties/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 496ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__4401726765282007751_70321595547040'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.5ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (18.2ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:36:00 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 394ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__4401726765282007751_70321595547040'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:36:36 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 466ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:       <%= @property[:property_type] %><br/>
+    13:       <%= @property[:price_paid_info][:price] %><br/>
+    14:       <%= @property[:price_paid_info][:date] %><br/>
+    15:       <%= @property[:coordinates][:latitude] %><br/>
+    16:       <%= @property[:coordinates][:longitude] %><br/>
+    17:       
+    18:     </div>
+  app/views/properties/show.html.erb:15:in `_app_views_properties_show_html_erb__4401726765282007751_70321595547040'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:36:48 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/govuk_template-0.12.0/app/views/layouts/govuk_template.html.erb (44.8ms)
+Completed 200 OK in 725ms (Views: 336.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/properties-07437bcd2d5fc4aa05133869d5b0329f.css?body=1" for ::1 at 2015-01-28 16:36:49 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-01-28 16:36:49 +0000
+
+
+Started GET "/assets/scaffolds-f8d7cbcaae0d08b4fc112e6fc88b96ef.css?body=1" for ::1 at 2015-01-28 16:36:49 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-01-28 16:36:49 +0000
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-01-28 16:36:49 +0000
+
+
+Started GET "/assets/properties-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-01-28 16:36:49 +0000
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:37:38 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (0.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/govuk_template-0.12.0/app/views/layouts/govuk_template.html.erb (1.1ms)
+Completed 200 OK in 631ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/properties-07437bcd2d5fc4aa05133869d5b0329f.css?body=1" for ::1 at 2015-01-28 16:37:39 +0000
+
+
+Started GET "/assets/scaffolds-f8d7cbcaae0d08b4fc112e6fc88b96ef.css?body=1" for ::1 at 2015-01-28 16:37:39 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-01-28 16:37:39 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-01-28 16:37:39 +0000
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-01-28 16:37:39 +0000
+
+
+Started GET "/assets/properties-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-01-28 16:37:39 +0000
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:37:46 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+Completed 500 Internal Server Error in 377ms
+
+NoMethodError (undefined method `fetch' for #<String:0x007ffe250a90d0>):
+  lib/property_data.rb:20:in `format_property_json'
+  lib/property_data.rb:10:in `find'
+  app/controllers/properties_controller.rb:9:in `show'
+
+
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:39:15 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.2ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/govuk_template-0.12.0/app/views/layouts/govuk_template.html.erb (32.4ms)
+Completed 200 OK in 260244ms (Views: 129.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/properties-07437bcd2d5fc4aa05133869d5b0329f.css?body=1" for ::1 at 2015-01-28 16:43:36 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-01-28 16:43:36 +0000
+
+
+Started GET "/assets/scaffolds-f8d7cbcaae0d08b4fc112e6fc88b96ef.css?body=1" for ::1 at 2015-01-28 16:43:36 +0000
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-01-28 16:43:36 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-01-28 16:43:36 +0000
+
+
+Started GET "/assets/properties-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-01-28 16:43:36 +0000
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:43:58 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/govuk_template-0.12.0/app/views/layouts/govuk_template.html.erb (32.3ms)
+Completed 200 OK in 28299ms (Views: 116.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/properties-07437bcd2d5fc4aa05133869d5b0329f.css?body=1" for ::1 at 2015-01-28 16:44:27 +0000
+
+
+Started GET "/properties/PL9%208TB/southernway_43" for ::1 at 2015-01-28 16:44:51 +0000
+Processing by PropertiesController#show as HTML
+  Parameters: {"postcode"=>"PL9 8TB", "address_string"=>"southernway_43"}
+  Rendered properties/show.html.erb within layouts/application (1.3ms)
+  Rendered /Users/hpwork/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/govuk_template-0.12.0/app/views/layouts/govuk_template.html.erb (33.9ms)
+Completed 200 OK in 612ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/properties-07437bcd2d5fc4aa05133869d5b0329f.css?body=1" for ::1 at 2015-01-28 16:44:52 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-01-28 16:44:52 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-01-28 16:44:52 +0000
+
+
+Started GET "/assets/scaffolds-f8d7cbcaae0d08b4fc112e6fc88b96ef.css?body=1" for ::1 at 2015-01-28 16:44:52 +0000
+
+
+Started GET "/assets/turbolinks-686d2bf7d9d383528c901c64187a8c31.js?body=1" for ::1 at 2015-01-28 16:44:52 +0000
+
+
+Started GET "/assets/properties-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-01-28 16:44:52 +0000
