@@ -1,3 +1,48 @@
 // Place all the styles related to the Properties controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import '_typography';
+@import '_colours';
+@import 'design-patterns/_buttons';
+@import 'design-patterns/_alpha-beta';
+@import '_grid_layout';
+
+h1 {
+  @include core-36;
+  font-weight:bold;
+}
+
+h2 {
+  @include core-24;
+  color: $secondary-text-colour
+}
+
+#page-container {
+  @extend %site-width-container;
+}
+.grid-row {
+  @extend %grid-row;
+
+  .mapping {
+    @include grid-column( 1/2 );
+    background-color: yellow;
+  }
+  .property_details {
+    @include grid-column( 1/2 );
+    @include core-24;
+    background-color: red;
+  }
+  .banner {
+    @include core-24;
+    background-color: blue;
+    margin: 5px 5px 0px 0px;
+  }
+  .council_stuff {
+    @include grid-column( 1/5 );
+    @include core-36;
+    height: 100px;
+    background-color: green;
+    margin: 5px 5px 5px 0px;
+  }
+}
