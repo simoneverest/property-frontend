@@ -53,4 +53,7 @@ group :development, :test do
   gem 'rspec-rails', '~>3.0'
 
   gem 'pry'
+
+  # Adding SimpleCov to provide coverage of Unit Testing
+  gem 'simplecov', :require => false
 end
