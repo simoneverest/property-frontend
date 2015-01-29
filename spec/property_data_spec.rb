@@ -1,4 +1,4 @@
-require 'property_data'
+require 'spec_helper'
 
 describe PropertyData do
 
