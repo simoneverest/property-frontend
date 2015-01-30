@@ -63,4 +63,8 @@ group :development, :test do
   # Adding SimpleCov to provide coverage of Unit Testing
   gem 'simplecov', :require => false
 
+  gem 'simplecov-cobertura', '~>1.0.2'
+
+  gem 'rspec_junit_formatter'
+
 end
