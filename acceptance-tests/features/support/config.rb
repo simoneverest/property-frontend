@@ -27,8 +27,3 @@ page.driver.add_header("Referer", "", permanent: true)
 ### Reads the basic auth username and password from env settings
 $http_auth_name = (ENV['HTTPAUTH_USERNAME'] || '')
 $http_auth_password = (ENV['HTTPAUTH_PASSWORD'] || '')
-
-### Includes the unit testing framework
-require 'test/unit'
-### Allows the functions (assert_equals to work)
-include Test::Unit::Assertions
