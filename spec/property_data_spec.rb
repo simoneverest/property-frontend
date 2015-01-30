@@ -7,7 +7,8 @@ describe PropertyData do
     {
       "saon" => "A",
       "street" => "Test Street",
-      "town" => "Plymouth"
+      "town" => "Plymouth",
+      "coordinates" => {"latitude" => "100", "longitude" => "100"}
     }
   }
   let(:postcode) { "PL9 8TB" }
