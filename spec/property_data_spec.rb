@@ -1,9 +1,8 @@
 require 'spec_helper'
 
 describe PropertyData do
-
-  let(:api_client) { double(:api_client, :get => fake_json_data) }
-  let(:fake_json_data) {
+  let(:api_client) { double(:api_client, :get => full_json_data)}
+  let(:full_json_data) {
     {
       "paon" => "A",
       "saon" => "B",
@@ -14,6 +13,13 @@ describe PropertyData do
       "property type" => "House",
       "price paid info" => {"amount" => 3, "date" => "23rd June"},
       "coordinates" => {"latitude" => 23.6, "longitude" => 15.4}
+    }
+  }
+  let(:partial_json_data) {
+    {
+      "street" => "Partial Street",
+      "town" => "Plymouth",
+      "postcode" => "PL3 7TH"
     }
   }
   let(:postcode) { "PL9 8TB" }
@@ -30,19 +36,23 @@ describe PropertyData do
     result = property_data.find(postcode, address_string)
     expect(result[:address]).to eq("A B Test Street Plymouth Devon PL8 2JF")
   end
-=begin
-  it "formats a partial address correctly" do
-    true
+  context "partial json api"do
+    let(:api_client) { double(:api_client, :get => partial_json_data)}
+    it "formats a partial address correctly" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:address]).to eq("Partial Street Plymouth PL3 7TH")
+    end
   end
-=end
+
 =begin
   it "returns the appropriate response when no map coordinates are found" do
-    true
+    This test is not required in this user story
   end
 =end
 =begin
   it "returns the appropriate response when no PPI data is found" do
-    true
+    This test is not required in this user story
   end
 =end
 end
