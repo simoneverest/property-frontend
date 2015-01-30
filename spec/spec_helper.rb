@@ -17,6 +17,12 @@
 
 # Adding SimpleCov to provide coverage of Unit Testing
 require 'simplecov'
+
+if ((!ENV['ci_config'].nil?) && (ENV['ci_config'] == 'true')) then# on ci server
+  require 'simplecov-cobertura'
+  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+end
+
 SimpleCov.start
 
 require 'property_data'
