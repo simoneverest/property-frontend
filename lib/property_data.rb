@@ -17,13 +17,17 @@ class PropertyData
   end
 
   def format_property_json(property_json)
-    coordinates = property_json.fetch("coordinates")
-    {
+    coordinates = property_json["coordinates"]
+    address_hash = {
       :address => format_address(property_json),
       :property_type => property_json["property_type"],
-      :price_paid_info => {:price => property_json["amount"], :date => property_json["date"]},
-      :coordinates => {:latitude => coordinates["latitude"], :longitude => coordinates["longitude"]},
+      :price_paid_info => {:price => property_json["amount"], :date => property_json["date"]}
     }
+    # If coordinates are returned from the API then put these into address_hash
+    if coordinates
+      address_hash[:coordinates] = {:latitude => coordinates["latitude"], :longitude => coordinates["longitude"]}
+    end
+    address_hash
   end
 
   def format_address(property_json)
