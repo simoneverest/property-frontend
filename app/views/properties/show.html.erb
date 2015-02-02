@@ -17,25 +17,24 @@
 
   <div class="inner-block">
     <div class="grid-row">
-      <h1 class="property-details-title-prefix">Property details</h1>
-      <div class="property_details">  
-        <h3 class="address">
+      <div class="column-half property_details">  
+        <h1 class="property-details-title-prefix">Property details</h1>
+        <h2 class="address">
           <%= @property[:address] %>
-        </h3>
+        </h2>
       
-        <p>
-          Property type: <span>House<%= @property[:property_type] %></span>
-        </p>
-        <p>
-          Price paid:<span> £250,000<%= @property[:price_paid_info][:price] %><%= @property[:price_paid_info][:date] %></span>
-        </p>
-        <!-- <p>
-        Council: <span><a href="#">West Croydon District Council</a></span>
-        </p> -->
+
+        <dl class="definition-tabular">
+            <dt>Property type: </dt>
+            <dd>House <%= @property[:property_type] %></dd>
+
+            <dt>Price paid</dt>
+            <dd>£250,000<%= @property[:price_paid_info][:price] %><%= @property[:price_paid_info][:date] %></dd>
+        </dl>
         
       </div>
 
-      <div class="map-placeholder">
+      <div class="column-half map-placeholder">
       </div>
 
     </div>

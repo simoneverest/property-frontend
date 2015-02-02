@@ -29,5 +29,40 @@ all styles need sassing up
     }
   }
 
+  .grid-row {
+    @extend %contain-floats;
+  }
+
+  .column-half {
+    @include grid-column( 1/2 );
+    padding: 0;
+  }
+
+
+  .property-details-title-prefix {
+    color: $grey-1;
+    @include core-27;
+    margin-bottom: 1.25em;
+    margin-top: 0.625em;
+  }
+
+  .address {
+    @include bold-36;
+  }
+
+  .definition-tabular dt, .definition-tabular--b dt {
+      width: 33.3333%;
+      clear: left;
+      float: left;
+      margin-bottom: 10px;
+      width: 25%;
+      @include core-19;
+  }
+  .definition-tabular dd, .definition-tabular--b dd {
+      float: left;
+      @include core-19;
+      margin-bottom: 10px;
+      font-weight: bold;
+  }
 
 }
