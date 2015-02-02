@@ -57,8 +57,8 @@ group :development, :test do
   # Adding SimpleCov to provide coverage of Unit Testing
   gem 'simplecov', :require => false
 
+  # Adding gems to convert unit test coverage and results to be used in Jenkins
   gem 'simplecov-cobertura', '~>1.0.2'
-
   gem 'rspec_junit_formatter'
 
 end
