@@ -1,9 +1,11 @@
+
 <div id="content">
   <div class="phase-banner">
     <p>
       <strong class="phase-tag">BETA</strong>
       <span>This is a design and user research prototype. <a href="https://www.gov.uk/service-manual/phases">Find out more about service design phases</a>.</span>
     </p>
+
   </div>
   <div class="header-context" id="global-breadcrumb">
     <nav role="navigation">
@@ -17,12 +19,12 @@
 
   <div class="inner-block">
     <div class="grid-row">
-      <div class="column-half property_details">  
+      <div class="column-half property_details">
         <h1 class="property-details-title-prefix">Property details</h1>
         <h2 class="address">
           <%= @property[:address] %>
         </h2>
-      
+
 
         <dl class="definition-tabular">
             <dt>Property type: </dt>
@@ -31,7 +33,7 @@
             <dt>Price paid</dt>
             <dd>£250,000<%= @property[:price_paid_info][:price] %><%= @property[:price_paid_info][:date] %></dd>
         </dl>
-        
+
       </div>
 
       <div class="column-half map-placeholder">

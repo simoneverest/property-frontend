@@ -25,7 +25,9 @@ describe PropertyData do
     }
   }
   let(:postcode) { "PL9 8TB" }
+  let(:empty_postcode) { "" }
   let(:address_string) { "testaddressstring"}
+  let(:empty_address_string) { "" }
 
   it "calls the property API with the postcode and address string" do
     property_data = described_class.new(api_client)
@@ -39,12 +41,30 @@ describe PropertyData do
     expect(result[:address]).to eq("A B Test Street Plymouth Devon PL8 2JF")
   end
 
-  context "partial json api"do
+  context "partial json api" do
     let(:api_client) { double(:api_client, :get => partial_json_data)}
     it "formats a partial address correctly" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:address]).to eq("Partial Street Plymouth PL3 7TH")
+    end
+
+    it "provides message if ppi information (price) is not available" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:price_paid_info][:price]).to eq("Not Available")
+    end
+
+    it "provides message if ppi information (date) is not available" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:price_paid_info][:date]).to eq("Not Available")
+    end
+
+    it "provides message if property type is not available" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:property_type]).to eq("Not Available")
     end
   end
 
@@ -60,4 +80,5 @@ describe PropertyData do
     This test is not required in this user story
   end
 =end
+
 end

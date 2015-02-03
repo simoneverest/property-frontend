@@ -17,11 +17,12 @@ class PropertyData
   end
 
   def format_property_json(property_json)
+    unavailable_data_message = ("Not Available")
     coordinates = property_json["coordinates"]
     address_hash = {
       :address => format_address(property_json),
-      :property_type => property_json["property_type"],
-      :price_paid_info => {:price => property_json["amount"], :date => property_json["date"]}
+      :property_type => property_json.fetch("property_type", unavailable_data_message),
+      :price_paid_info => {:price => property_json.fetch("price", unavailable_data_message), :date => property_json.fetch("date", unavailable_data_message)}
     }
     # If coordinates are returned from the API then put these into address_hash
     if coordinates
