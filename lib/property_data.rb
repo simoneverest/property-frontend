@@ -59,11 +59,11 @@ class PropertyData
     #TODO deal with saon
     first_line = ["paon", "street"].map do |key|
       property_json[key]
-    end.join(" ")
+    end.compact.join(" ")
     rest_of_address = ["town", "county", "postcode"].map do |key|
       property_json[key]
     end
-    [first_line] + rest_of_address.compact
+    ([first_line] + rest_of_address).compact
 
   end
 end
