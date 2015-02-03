@@ -10,8 +10,8 @@
   <div class="header-context" id="global-breadcrumb">
     <nav role="navigation">
       <ol class="group">
-        <li><a href="https://www.gov.uk/service-manual/">Home</a></li>
-        <li><a href="https://www.gov.uk/service-manual/user-centred-design">User-centred design</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
       </ol>
     </nav>
   </div>
@@ -28,15 +28,16 @@
 
         <dl class="definition-tabular">
             <dt>Property type: </dt>
-            <dd>House <%= @property[:property_type] %></dd>
+            <dd><%= @property[:property_type] %></dd>
 
-            <dt>Price paid</dt>
-            <dd>£250,000<%= @property[:price_paid_info][:price] %><%= @property[:price_paid_info][:date] %></dd>
+            <dt>Price paid:</dt>
+            <dd><%= @property[:price_paid_info][:price] %> on <%= @property[:price_paid_info][:date] %></dd>
         </dl>
 
       </div>
 
       <div class="column-half map-placeholder">
+        <%=image_tag("dummy-title-plan18.jpg" , alt: "Map placeholder")%>
       </div>
 
     </div>
