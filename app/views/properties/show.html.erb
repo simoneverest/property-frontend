@@ -21,10 +21,9 @@
     <div class="grid-row">
       <div class="column-half property_details">
         <h1 class="property-details-title-prefix">Property details</h1>
-        <h2 class="address">
-          <%= @property[:address] %>
-        </h2>
-
+        <% @property[:address].each do | address_line| %>
+          <h2 class="address"><%= address_line %></h2>
+        <% end %>
 
         <dl class="definition-tabular">
             <dt>Property type: </dt>
