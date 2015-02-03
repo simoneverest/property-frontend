@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'properties/:postcode/:address_string' => 'properties#show'
 
+  get 'properties/:postcode' => 'properties#postcode_index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

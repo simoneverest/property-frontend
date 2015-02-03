@@ -9,6 +9,10 @@ class PropertiesController < ApplicationController
     @property = data_repository.find(params[:postcode], params[:address_string])
     unless @property
       record_not_found
-    end 
+    end
+  end
+
+  def postcode_index
+    
   end
 end
