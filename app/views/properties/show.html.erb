@@ -1,52 +1,44 @@
-<div id='page-container'>
 
-  <p id="notice"><%= notice %></p>
-
-  <div class="grid-row">
-
-    <div class="property_details">
-
-      <h2>Property Details</h2>
-
-      <%= @property[:address] %><br/>
-      <%= @property[:property_type] %><br/>
-      <%= @property[:price_paid_info][:price] %><br/>
-      <%= @property[:price_paid_info][:date] %><br/>
-
-    </div>
-
-    <div class="mapping">
-      blah
-    </div>
-
+<div id="content">
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a design and user research prototype. <a href="https://www.gov.uk/service-manual/phases">Find out more about service design phases</a>.</span>
+    </p>
+  </div>
+  <div class="header-context" id="global-breadcrumb">
+    <nav role="navigation">
+      <ol class="group">
+        <li><a href="https://www.gov.uk/service-manual/">Home</a></li>
+        <li><a href="https://www.gov.uk/service-manual/user-centred-design">User-centred design</a></li>
+      </ol>
+    </nav>
   </div>
 
-  <div class="grid-row">
 
-    <div class="banner">
-      a banner goes here
+  <div class="inner-block">
+    <div class="grid-row">
+      <div class="column-half property_details">
+        <h1 class="property-details-title-prefix">Property details</h1>
+        <h2 class="address">
+          <%= @property[:address] %>
+        </h2>
+
+
+        <dl class="definition-tabular">
+            <dt>Property type: </dt>
+            <dd>House <%= @property[:property_type] %></dd>
+
+            <dt>Price paid</dt>
+            <dd>£250,000<%= @property[:price_paid_info][:price] %><%= @property[:price_paid_info][:date] %></dd>
+        </dl>
+
+      </div>
+
+      <div class="column-half map-placeholder">
+      </div>
+
     </div>
-
-  </div>
-
-  <div class="grid-row">
-
-    <div class="council_stuff">
-      BIN DAY
-    </div>
-
-    <div class="council_stuff">
-      LOCAL SCHOOLS
-    </div>
-
-    <div class="council_stuff">
-      DOCTORS
-    </div>
-
-    <div class="council_stuff">
-      MOAR STUFF
-    </div>
-
   </div>
 
 </div>
