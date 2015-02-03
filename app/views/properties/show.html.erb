@@ -30,7 +30,7 @@
             <dd><%= @property[:property_type] %></dd>
 
             <dt>Price paid:</dt>
-            <dd><%= @property[:price_paid_info][:price] %> on <%= @property[:price_paid_info][:date] %></dd>
+            <dd>£<%= number_with_delimiter(@property[:price_paid_info][:price], :delimiter => ',') %> on <%= @property[:price_paid_info][:date] %></dd>
         </dl>
 
       </div>

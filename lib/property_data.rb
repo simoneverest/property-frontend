@@ -30,7 +30,7 @@ class PropertyData
       "postcode" => "PL9 8TB",
       "property_type" => "terraced",
       "coordinates" => {"latitude" => "100", "longitude" => "100"},
-      "price" => "250000",
+      "amount" => "250000",
       "date" => "04-04-2011",
     }
   end
@@ -38,10 +38,15 @@ class PropertyData
   def format_property_json(property_json)
     unavailable_data_message = ("Not Available")
     coordinates = property_json["coordinates"]
+    date = if property_json["date"]
+      DateTime.parse(property_json["date"]).strftime("%-d %B %Y")
+    else
+      unavailable_data_message
+    end
     address_hash = {
       :address => format_address(property_json),
       :property_type => property_json.fetch("property_type", unavailable_data_message),
-      :price_paid_info => {:price => property_json.fetch("price", unavailable_data_message), :date => property_json.fetch("date", unavailable_data_message)}
+      :price_paid_info => {:price => property_json.fetch("amount", unavailable_data_message), :date => date}
     }
     # If coordinates are returned from the API then put these into address_hash
     if coordinates
