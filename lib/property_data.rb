@@ -6,7 +6,13 @@ class PropertyData
   end
 
   def find(postcode, address_string)
-    property_json = get_property_json(postcode, address_string)
+    #if the postcode is bla and address_strinh is bleugh (the one case we're hardcoding)
+    #then preoptty_json = hardcoded_thing
+    if postcode == "PL9 8TB" and address_string == "southernway_43"
+      property_json = fake_address_json
+    else
+      property_json = get_property_json(postcode, address_string)
+    end
     format_property_json(property_json)
   end
 
@@ -14,6 +20,19 @@ class PropertyData
 
   def get_property_json(postcode, address_string)
     @api_client.get("/properties/#{URI::encode(postcode)}/#{URI::encode(address_string)}")
+  end
+
+  def fake_address_json
+    {
+      "paon" => "43",
+      "street" => "Southernway",
+      "town" => "Plymouth",
+      "postcode" => "PL9 8TB",
+      "property_type" => "terraced",
+      "coordinates" => {"latitude" => "100", "longitude" => "100"},
+      "price" => "250000",
+      "date" => "04-04-2011",
+    }
   end
 
   def format_property_json(property_json)
