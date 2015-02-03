@@ -31,6 +31,7 @@ all styles need sassing up
 
   .grid-row {
     @extend %contain-floats;
+    margin: 0 0 15px 0;
   }
 
   .column-half {
@@ -65,4 +66,17 @@ all styles need sassing up
       font-weight: bold;
   }
 
+  .map-placeholder img{
+    max-width: calc(100% - 8px);
+    display: block;
+    border: 4px solid #dee0e2;
+  }
+
+}
+
+
+@media screen and (max-width: 640px) {
+    .column-half {
+      clear: both;
+    }
 }
