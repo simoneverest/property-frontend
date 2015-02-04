@@ -55,7 +55,7 @@ describe PropertyData do
   it "formats a full address correctly" do
     property_data = described_class.new(api_client)
     result = property_data.find(postcode, address_string)
-    expect(result[:address]).to eq(["A Test Street", "Plymouth", "Devon", "PL8 2JF"])
+    expect(result[:address]).to eq(["B", "A Test Street", "Plymouth", "Devon", "PL8 2JF"])
   end
 
   it "Displays PPI information" do
