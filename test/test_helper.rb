@@ -4,6 +4,12 @@ require 'rails/test_help'
 require 'minitest/reporters'
 require 'minitest/ci'
 Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new, Minitest::Reporters::JUnitReporter.new]
+require 'vcr'
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'test/cassettes'
+  c.hook_into :webmock
+end
 
 class ActiveSupport::TestCase
 
