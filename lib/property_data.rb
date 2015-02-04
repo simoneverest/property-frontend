@@ -8,14 +8,15 @@ class PropertyData
   end
 
   def find(postcode, address_string)
-    #if the postcode is bla and address_strinh is bleugh (the one case we're hardcoding)
-    #then preoptty_json = hardcoded_thing
+    #TODO: remove this hardcoded case
     if postcode == "PL9 8TB" and address_string == "southernway_43"
       property_json = fake_address_json
     else
       property_json = get_property_json(postcode, address_string)
     end
-    format_property_json(property_json)
+    unless property_json["message"] == "No record found."
+      format_property_json(property_json)
+    end
   end
 
   private
