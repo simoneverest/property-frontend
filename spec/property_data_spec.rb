@@ -46,56 +46,58 @@ describe PropertyData do
   let(:address_string) { "testaddressstring"}
   let(:empty_address_string) { "" }
 
-  it "calls the property API with the postcode and address string" do
-    property_data = described_class.new(api_client)
-    property_data.find(postcode, address_string)
-    expect(api_client).to have_received(:get).with("/properties/PL9%208TB/testaddressstring")
+  context "All data available" do
+    it "calls the property API with the postcode and address string" do
+      property_data = described_class.new(api_client)
+      property_data.find(postcode, address_string)
+      expect(api_client).to have_received(:get).with("/properties/PL9%208TB/testaddressstring")
+    end
+
+    it "a full address is formatted correctly" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:address]).to eq(["B", "A Test Street", "Plymouth", "Devon", "PL8 2JF"])
+    end
+
+    it "Displays PPI information in correct format" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:price_paid_info]).to eq("£25,000 on 23 January 2009")
+    end
   end
 
-  it "formats a full address correctly" do
-    property_data = described_class.new(api_client)
-    result = property_data.find(postcode, address_string)
-    expect(result[:address]).to eq(["B", "A Test Street", "Plymouth", "Devon", "PL8 2JF"])
-  end
-
-  it "Displays PPI information" do
-    property_data = described_class.new(api_client)
-    result = property_data.find(postcode, address_string)
-    expect(result[:price_paid_info]).to eq("£25,000 on 23 January 2009")
-  end
-
-  context "partial json api" do
+  context "No property type and no PPI information" do
     let(:api_client) { double(:api_client, :get => partial_json_data)}
-    it "formats a partial address correctly" do
+    it "a partial address is formatted correctly" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:address]).to eq(["Partial Street", "Plymouth", "PL3 7TH"])
     end
 
-    it "provides message if property type is not available" do
+    it "The message 'Not Available' is displayed for property type" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:property_type]).to eq("Not Available")
     end
 
-    it "provides the correct unavailable message when there is no date or amount for the ppi" do
+    it "The message 'Not Available' is displayed for PPI" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:price_paid_info]).to eq("Not Available")
     end
   end
 
-  context "no amount ppi" do
+  context "PPI information with no amount but with a date" do
     let(:api_client) { double(:api_client, :get => no_amount_ppi)}
-    it "it provides the correct unavailable message when there is no amount for the ppi" do
+    it "The message 'Not Available' is displayed for PPI" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:price_paid_info]).to eq("Not Available")
     end
   end
-  context "no date ppi" do
+  context "PPI information with no date but with an amount" do
     let(:api_client) { double(:api_client, :get => no_date_ppi)}
-    it "it provides the correct unavailable message when there is no date for the ppi" do
+    it "The message 'Not Available' is displayed for PPI" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:price_paid_info]).to eq("Not Available")
