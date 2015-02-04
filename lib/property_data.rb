@@ -1,4 +1,6 @@
 require 'open-uri'
+require 'action_view'
+
 class PropertyData
 
   def initialize(api_client)
@@ -35,18 +37,16 @@ class PropertyData
     }
   end
 
+  def unavailable_data
+    "Not Available"
+  end
+
   def format_property_json(property_json)
-    unavailable_data_message = ("Not Available")
     coordinates = property_json["coordinates"]
-    date = if property_json["date"]
-      DateTime.parse(property_json["date"]).strftime("%-d %B %Y")
-    else
-      unavailable_data_message
-    end
     address_hash = {
       :address => format_address(property_json),
-      :property_type => property_json.fetch("property_type", unavailable_data_message),
-      :price_paid_info => {:price => property_json.fetch("amount", unavailable_data_message), :date => date}
+      :property_type => property_json.fetch("property_type", unavailable_data),
+      :price_paid_info => format_ppi(property_json)
     }
     # If coordinates are returned from the API then put these into address_hash
     if coordinates
@@ -64,6 +64,16 @@ class PropertyData
       property_json[key]
     end
     ([first_line] + rest_of_address).compact
-
   end
+
+  def format_ppi(property_json)
+    if property_json["date"] && property_json["amount"]
+      date = DateTime.parse(property_json["date"]).strftime("%-d %B %Y")
+      amount = ActionView::Base.new.number_with_delimiter(property_json["amount"])
+      "£#{amount} on #{date}"
+    else
+      unavailable_data
+    end
+  end
+
 end
