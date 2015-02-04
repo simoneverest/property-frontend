@@ -58,5 +58,7 @@ group :development, :test do
   # Adding gems to convert unit test coverage and results to be used in Jenkins
   gem 'simplecov-cobertura', '~>1.0.2'
   gem 'rspec_junit_formatter'
+  gem 'cucumber-rails', :require => false
+  gem 'capybara'
 
 end
