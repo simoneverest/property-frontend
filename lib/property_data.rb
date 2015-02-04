@@ -56,14 +56,14 @@ class PropertyData
   end
 
   def format_address(property_json)
-    #TODO deal with saon
-    first_line = ["paon", "street"].map do |key|
+    saon = property_json["saon"]
+    paon_street = ["paon", "street"].map do |key|
       property_json[key]
     end.compact.join(" ")
     rest_of_address = ["town", "county", "postcode"].map do |key|
       property_json[key]
     end
-    ([first_line] + rest_of_address).compact
+    ([saon, paon_street] + rest_of_address).compact
   end
 
   def format_ppi(property_json)
