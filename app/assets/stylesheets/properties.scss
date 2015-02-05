@@ -21,6 +21,11 @@ all styles need sassing up
 #content {
   @extend %site-width-container;
 
+
+  .top-section {
+    border-bottom: 1px solid $grey-2; 
+  }
+
   /* phase tag */
   .phase-banner {
     @include phase-banner;
@@ -70,6 +75,10 @@ all styles need sassing up
     max-width: calc(100% - 8px);
     display: block;
     border: 4px solid #dee0e2;
+  }
+
+  .bottom-section p {
+    @include bold-16;
   }
 
 }
