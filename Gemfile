@@ -60,5 +60,8 @@ group :development, :test do
   gem 'rspec_junit_formatter'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
-
+  gem 'webmock'
+  gem 'vcr'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'rb-readline', :platforms => :ruby
 end
