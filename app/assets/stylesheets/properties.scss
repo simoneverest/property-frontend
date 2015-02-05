@@ -11,11 +11,11 @@
 @import "_conditionals";
 
 
-/* 
+/*
 /////////////////////////
-all styles need sassing up
+TODO: all styles need sassing up
 ////////////////////////
- */
+*/
 
 
 #content {
@@ -25,7 +25,7 @@ all styles need sassing up
   .phase-banner {
     @include phase-banner;
     .phase-tag {
-      @include phase-tag; 
+      @include phase-tag;
     }
   }
 
