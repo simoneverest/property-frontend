@@ -46,6 +46,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    ansi (1.5.0)
     arel (6.0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -115,6 +116,13 @@ GEM
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
+    minitest-ci (3.0.3)
+      minitest (~> 5.0, >= 5.0.6)
+    minitest-reporters (1.0.10)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     multi_json (1.10.1)
     multi_test (0.1.1)
     netrc (0.10.2)
@@ -183,6 +191,7 @@ GEM
       builder (< 4)
       rspec (>= 2, < 4)
       rspec-core (!= 2.12.0)
+    ruby-progressbar (1.7.1)
     safe_yaml (1.0.4)
     sass (3.4.10)
     sass-rails (5.0.1)
@@ -250,6 +259,8 @@ DEPENDENCIES
   govuk_template
   jbuilder (~> 2.0)
   jquery-rails
+  minitest-ci
+  minitest-reporters
   pry
   rails (= 4.2.0)
   rb-readline

@@ -64,4 +64,7 @@ group :development, :test do
   gem 'vcr'
   gem 'therubyracer', :platforms => :ruby
   gem 'rb-readline', :platforms => :ruby
+  gem 'minitest-reporters'
+  gem 'minitest-ci'
+
 end
