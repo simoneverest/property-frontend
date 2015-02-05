@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/properties/N1BLT/imaginary-street
+    uri: http://localhost:8001/properties/N1BLT/imaginary-street
     body:
       encoding: US-ASCII
       string: ''
@@ -33,6 +33,6 @@ http_interactions:
         <title>404 Not Found</title>
         <h1>Not Found</h1>
         <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
-    http_version: 
+    http_version:
   recorded_at: Wed, 04 Feb 2015 17:57:48 GMT
 recorded_with: VCR 2.5.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/properties/PL9%25208TB/southernway_99
+    uri: http://localhost:8001/properties/PL9%25208TB/southernway_99
     body:
       encoding: US-ASCII
       string: ''
@@ -32,6 +32,6 @@ http_interactions:
         {
           "message": "No record found."
         }
-    http_version: 
+    http_version:
   recorded_at: Wed, 04 Feb 2015 17:58:14 GMT
 recorded_with: VCR 2.5.0
