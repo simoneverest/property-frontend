@@ -1,45 +1,56 @@
 
 <div id="content">
-  <div class="phase-banner">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is a design and user research prototype. <a href="https://www.gov.uk/service-manual/phases">Find out more about service design phases</a>.</span>
-    </p>
-
-  </div>
-  <div class="header-context" id="global-breadcrumb">
-    <nav role="navigation">
-      <ol class="group">
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ol>
-    </nav>
-  </div>
-
-
-  <div class="inner-block">
-    <div class="grid-row">
-      <div class="column-half property_details">
-        <h1 class="property-details-title-prefix">Property details</h1>
-        <% @property[:address].each do | address_line| %>
-          <h2 class="address"><%= address_line %></h2>
-        <% end %>
-
-        <dl class="definition-tabular">
-            <dt>Property type: </dt>
-            <dd><%= @property[:property_type] %></dd>
-
-            <dt>Price paid:</dt>
-            <dd><%= @property[:price_paid_info] %></dd>
-        </dl>
-
-      </div>
-
-      <div class="column-half map-placeholder">
-        <img src="http://maps.google.com/maps/api/staticmap?markers=51.523748,-0.158435|51.523748,-0.158435&zoom=17&size=500x400">
-      </div>
+  <div class="page-section top-section">
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag">BETA</strong>
+        <span>This is a design and user research prototype. <a href="https://www.gov.uk/service-manual/phases">Find out more about service design phases</a>.</span>
+      </p>
 
     </div>
-  </div>
+    <div class="header-context" id="global-breadcrumb">
+      <nav role="navigation">
+        <ol class="group">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ol>
+      </nav>
+    </div>
 
+
+    <div class="inner-block">
+      <div class="grid-row">
+        <div class="column-half property_details">
+          <h1 class="property-details-title-prefix">Property details</h1>
+          <% @property[:address].each do | address_line| %>
+            <h2 class="address"><%= address_line %></h2>
+          <% end %>
+
+            <dl class="definition-tabular">
+                <dt>Property type: </dt>
+                <dd><%= @property[:property_type] %></dd>
+
+                <dt>Price paid:</dt>
+                <dd><%= @property[:price_paid_info] %></dd>
+            </dl>
+
+        </div>
+
+        <div class="column-half map-placeholder">
+          <img src="http://maps.google.com/maps/api/staticmap?markers=51.523748,-0.158435|51.523748,-0.158435&zoom=17&size=500x400">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- <div class="page-section mid-section">
+
+  </div> -->
+  <div class="page-section bottom-section">
+      <p>
+        <a href="http://eservices.landregistry.gov.uk/wps/portal/Property_Search">
+          Click here to go to the land registry page
+        </a>
+      </p>
+  </div>
 </div>
