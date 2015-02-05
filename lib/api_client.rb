@@ -6,6 +6,7 @@ class ApiClient
 
   def get(url_string)
 
+
     if Rails.application.config.use_static_content
       JSON.parse( IO.read("lib/sample_json.json") )
     else

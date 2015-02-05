@@ -11,7 +11,7 @@
 @import "_conditionals";
 
 
-/* 
+/*
 /////////////////////////
 all styles need sassing up
 ////////////////////////
@@ -21,11 +21,14 @@ all styles need sassing up
 #content {
   @extend %site-width-container;
 
+  margin-bottom: 15px;
+  margin-top: 15px;
+
   /* phase tag */
   .phase-banner {
     @include phase-banner;
     .phase-tag {
-      @include phase-tag; 
+      @include phase-tag;
     }
   }
 
