@@ -26,6 +26,7 @@ end
 SimpleCov.start
 
 require 'property_data'
+require 'api_client'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
