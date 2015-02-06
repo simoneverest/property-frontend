@@ -1,30 +1,13 @@
 # Property-Frontend README
 
-This is going to updated by Heather Poole by the 2nd of February.
+1. This is the frontend system which displays properties for the Land Registry.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2. It will display all properties regardless of whether they have a title or not and will display the properties most recent ...price paid info if it exists.
 
-Things you may want to cover:
+3. This application for development currently runs on the centos-dev-env and it needs access to the property-title-api to run.
 
-* Ruby version
+4. It uses Ruby Version 2.1 and Rails Version 4.2.
 
-* System dependencies
+5. As it's a frontend consuming the property-title-api it doesn't have a database to set up.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+6. To run all tests for the frontend run 'bundle exec rake', for the cucumber tests to pass these needs to be run in the ...virtual dev environment available in the Land Registry repository and labelled 'centos-dev-env'.  This will make sure that ...all services needed for the acceptance tests are running.
