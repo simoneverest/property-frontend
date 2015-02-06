@@ -1,16 +1,11 @@
 Feature: Find Property
 
-@US004 @View_PPI_Information
-Scenario: View Price Paid
+@US001 @View_Full_Address
+Scenario: View Correct Map Location
   Given I am a citizen
   And I have a property
   When I view the property detail page
-  Then I see the price paid of the property
-
-
-@US001 @View_Full_Address
-
-
+  Then I see the map to the correct coordinates
 
 @US001 @View_Full_Address
 Scenario: View Full Address
@@ -19,9 +14,9 @@ Scenario: View Full Address
   When I view the property detail page
   Then I see the full address of the property
 
-
 @US001 @View_Full_Address
 Scenario: Address Does Not Exist
   Given I am a citizen
-  When I view a property that does not exist
+  And I try to view a property that does not exist
+  When I view the property detail page
   Then I get a page not found message
