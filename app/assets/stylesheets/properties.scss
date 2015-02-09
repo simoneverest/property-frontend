@@ -25,11 +25,6 @@ TODO: all styles need sassing up
     border-bottom: 1px solid $grey-2; 
   }
 
-
-  .top-section {
-    border-bottom: 1px solid $grey-2; 
-  }
-
   /* phase tag */
   .phase-banner {
     @include phase-banner;
