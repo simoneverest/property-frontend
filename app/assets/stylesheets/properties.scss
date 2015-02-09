@@ -21,9 +21,6 @@ TODO: all styles need sassing up
 #content {
   @extend %site-width-container;
 
-  margin-bottom: 15px;
-  margin-top: 15px;
-
   /* phase tag */
   .phase-banner {
     @include phase-banner;
