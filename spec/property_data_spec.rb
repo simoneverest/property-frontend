@@ -11,7 +11,7 @@ describe PropertyData do
       "town" => "Plymouth",
       "county" => "Devon",
       "postcode" => "PL8 2JF",
-      "property type" => "House",
+      "property_type" => "House",
       "amount" => 25000,
       "date" => "23-01-2009",
       "coordinates" => {"latitude" => 23.6, "longitude" => 15.4}
@@ -57,6 +57,12 @@ describe PropertyData do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:address]).to eq(["B", "A Test Street", "Plymouth", "Devon", "PL8 2JF"])
+    end
+
+    it "Displays Property type information in correct format" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:property_type]).to eq("House")
     end
 
     it "Displays PPI information in correct format" do
