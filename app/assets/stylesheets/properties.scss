@@ -19,10 +19,9 @@ TODO: all styles need sassing up
 
 
 #content {
-  @extend %site-width-container;
-
+  @extend %site-width-container;  
   .top-section {
-    border-bottom: 1px solid $grey-2;
+    border-bottom: 1px solid $grey-2; 
   }
 
   /* phase tag */
@@ -36,6 +35,10 @@ TODO: all styles need sassing up
   .grid-row {
     @extend %contain-floats;
     margin: 0 0 15px 0;
+
+    h1.property-details-title-prefix {
+        margin-top: 0;
+    }
   }
 
   .column-half {
