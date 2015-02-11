@@ -1,10 +1,8 @@
 <div id="content">
   <ul>
-    <li><a href="http://localhost:3000/properties/PL9%208TB/southernway_43">Property Address with PPI - 43 Southernway</a></li>
-
-    <li><a href="http://localhost:3000/properties/PL9%208TB/southernway_41">NO Property with PPI - 41 Southernway</a></li>
-
-    <li><a href="http://localhost:3000/properties/PL9%208TB/southernway_45">Property with nothing - 45 Southernway</a></li>
+    <li><a href="<%= url_for :controller => 'properties', :action => 'show', :postcode => 'PL9 8TB', :address_string => 'southernway_43' %>">Property Address with PPI - 43 Southernway</a></li>
+    <li><a href="<%= url_for :controller => 'properties', :action => 'show', :postcode => 'PL9 8TB', :address_string => 'southernway_41' %>">NO Property with PPI - 41 Southernway</a></li>
+    <li><a href="<%= url_for :controller => 'properties', :action => 'show', :postcode => 'PL9 8TB', :address_string => 'southernway_45' %>">Property with nothing - 45 Southernway</a></li>
   </ul>
 </div>
 <!-- TODO: remove this placeholder page, written for show and tell purposes only -->
