@@ -1,5 +1,7 @@
 # Property-Frontend README
 
+[![Build Status](http://54.72.23.130/job/property-title-api-unit-tests/badge/icon)](http://54.72.23.130/job/property-title-api-unit-tests/)
+
 This is the frontend system which displays properties for the Land Registry.
 
 It will display all properties regardless of whether they have a title or not and will display the properties most recent price paid info if it exists.
