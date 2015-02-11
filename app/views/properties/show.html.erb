@@ -37,7 +37,10 @@
         </div>
 
         <div class="column-half map-placeholder">
-          <img src="http://maps.google.com/maps/api/staticmap?markers=51.523748,-0.158435|51.523748,-0.158435&zoom=17&size=500x400">
+          <% latitude = @property[:coordinates][:latitude]
+             longitude = @property[:coordinates][:longitude]
+          %>
+          <img src="http://maps.google.com/maps/api/staticmap?markers=<%=latitude%>,<%=longitude%>|<%=latitude%>,<%=longitude%>&zoom=17&size=500x400">
         </div>
 
       </div>
