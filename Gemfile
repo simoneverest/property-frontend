@@ -41,6 +41,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+  gem 'webmock'
+  
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -60,11 +62,12 @@ group :development, :test do
   gem 'rspec_junit_formatter'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
-  gem 'webmock'
   gem 'vcr'
   gem 'therubyracer', :platforms => :ruby
   gem 'rb-readline', :platforms => :ruby
   gem 'minitest-reporters'
   gem 'minitest-ci'
+  gem 'poltergeist'
+  gem 'pg' # added to help load the db
 
 end
