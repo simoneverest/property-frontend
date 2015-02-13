@@ -66,3 +66,22 @@ Then(/^I see the map to the correct coordinates$/) do
   expect(map['src']).to include(sprintf('%.3f',$property_data['address']['position_x']))
   expect(map['src']).to include(sprintf('%.3f',$property_data['address']['position_y']))
 end
+
+Given(/^I have a property that does not have location coordinates$/) do
+  $property_data = Hash.new();
+
+# create a new hash that will contain address data
+  $property_data['address'] = Hash.new();
+  $property_data['address']['house_number'] = '43';
+  $property_data['address']['street_name'] = 'Southernway';
+  $property_data['address']['postcode'] = 'PL9 8TB';
+# calls a function to get rid of existing data to remove chance of duplicate rows
+  delete_all_properties
+# call the function that will insert our hash data into the database
+  res = create_property_in_db($property_data)
+end
+
+Then(/^a message is shown in place of the map section$/) do
+  map_unavailable = page.find('//*[@id="content"]/div[1]/div[3]/div/div[2]/h3')
+  expect(map_unavailable.text).to eq ("No map available")
+end

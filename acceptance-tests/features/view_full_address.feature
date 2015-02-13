@@ -1,11 +1,4 @@
-Feature: Find Property
-
-@US001 @View_Full_Address
-Scenario: View Correct Map Location
-  Given I am a citizen
-  And I have a property
-  When I view the property detail page
-  Then I see the map to the correct coordinates
+Feature: View Full Address
 
 @US001 @View_Full_Address
 Scenario: View Full Address
