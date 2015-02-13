@@ -50,7 +50,7 @@ class PropertyData
       :price_paid_info => format_ppi(property_json)
     }
     # If coordinates are returned from the API then put these into address_hash
-    if coordinates
+    if coordinates && coordinates["latitude"] && coordinates["longitude"]
       address_hash[:coordinates] = {:latitude => coordinates["latitude"], :longitude => coordinates["longitude"]}
     end
     address_hash
