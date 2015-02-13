@@ -1,4 +1,5 @@
-# Property-Frontend README
+Property-Frontend README
+===============
 
 [![Build Status](http://54.72.23.130/job/property-title-api-unit-tests/badge/icon)](http://54.72.23.130/job/property-title-api-unit-tests/)
 
@@ -21,3 +22,29 @@ It will display all properties regardless of whether they have a title or not an
 5. To run the unit tests use the command `bundle exec rspec`
 
 6. For the cucumber tests to pass these needs to be run in the virtual dev environment available in the Land Registry    repository and labelled 'centos-dev-env'.  This will make sure that all services needed for the acceptance tests are running.
+
+### Acceptance Tests
+
+Navigate to the acceptance test repository
+
+```
+cd acceptance-tests/
+```
+
+To run all the tests:
+
+```
+./run_tests.sh
+```
+
+Or to run a specific feature:
+
+```
+./run_tests.sh features/property_frontend.feature
+```
+
+Or to run a specific scenario(the 29 refers to the line in the future file that your scenario starts on):
+
+```
+./run_tests.sh features/property_frontend.feature:18
+```
