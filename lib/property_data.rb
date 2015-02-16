@@ -46,7 +46,7 @@ class PropertyData
     coordinates = property_json["coordinates"]
     address_hash = {
       :address => format_address(property_json),
-      :property_type => property_json.fetch("property_type", unavailable_data),
+      :property_type => property_json.fetch("property_type", unavailable_data).capitalize,
       :price_paid_info => format_ppi(property_json)
     }
     # If coordinates are returned from the API then put these into address_hash
