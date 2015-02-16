@@ -85,3 +85,15 @@ Then(/^a message is shown in place of the map section$/) do
   map_unavailable = page.find('//*[@id="content"]/div[1]/div[3]/div/div[2]/h3')
   expect(map_unavailable.text).to eq ("No map available")
 end
+
+Then(/^a hyperlink to LR statutory services should be available$/) do
+
+end
+
+When(/^I click the LR Statutory services link$/) do
+
+end
+
+Then(/^I am taken to the Find a Property service$/) do
+
+end
