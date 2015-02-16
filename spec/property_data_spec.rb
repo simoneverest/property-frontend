@@ -25,6 +25,15 @@ describe PropertyData do
       "postcode" => "PL3 7TH"
     }
   }
+
+  let(:complicated_caps) {
+    {
+      "street" => "53 MCDONALDS O'BRIEN VON STREIT MACDONALDS DE LA TOUR DI CAPRIO ST. JOHN STREET",
+      "town" => "PLYMOUTH",
+      "postcode" => "PL3 7TH"
+    }
+  }
+
   let(:no_amount_ppi) {
      {
        "county" => "Devon",
@@ -101,12 +110,28 @@ describe PropertyData do
       expect(result[:price_paid_info]).to eq("Not Available")
     end
   end
+
   context "PPI information with no date but with an amount" do
     let(:api_client) { double(:api_client, :get => no_date_ppi)}
     it "The message 'Not Available' is displayed for PPI" do
       property_data = described_class.new(api_client)
       result = property_data.find(postcode, address_string)
       expect(result[:price_paid_info]).to eq("Not Available")
+    end
+  end
+
+  context "Address is in addressbase format with complicated capitalisation" do
+    let(:api_client) { double(:api_client, :get => complicated_caps)}
+    it "Capitalises the address properly" do
+      property_data = described_class.new(api_client)
+      result = property_data.find(postcode, address_string)
+      expect(result[:address]).to eq(
+        [
+          "53 McDonalds O'Brien von Streit MacDonalds de la Tour di Caprio St. John Street",
+          "Plymouth",
+          "PL3 7TH"
+        ]
+      )
     end
   end
 

@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'action_view'
+require 'namecase'
 
 class PropertyData
 
@@ -44,9 +45,10 @@ class PropertyData
 
   def format_property_json(property_json)
     coordinates = property_json["coordinates"]
+    property_type = property_json["property_type"]
     address_hash = {
       :address => format_address(property_json),
-      :property_type => property_json.fetch("property_type", unavailable_data).capitalize,
+      :property_type => property_type ? property_type.capitalize : unavailable_data,
       :price_paid_info => format_ppi(property_json)
     }
     # If coordinates are returned from the API then put these into address_hash
@@ -61,10 +63,14 @@ class PropertyData
     paon_street = ["paon", "street"].map do |key|
       property_json[key]
     end.compact.join(" ")
-    rest_of_address = ["town", "county", "postcode"].map do |key|
+    rest_of_address = ["town", "county"].map do |key|
       property_json[key]
     end
-    ([saon, paon_street] + rest_of_address).compact
+    address_lines = ([saon, paon_street] + rest_of_address).compact
+    capitalised_lines = address_lines.map do |address_line|
+      NameCase(address_line)
+    end
+    capitalised_lines + [property_json["postcode"]]
   end
 
   def format_ppi(property_json)

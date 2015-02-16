@@ -34,6 +34,10 @@ gem 'sdoc', '~> 0.4.0'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+#Capitalisation gem, preferrable to rails titleize
+#since it handles special cases like "di Caprio" and "McDonalds"
+gem 'namecase'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -42,7 +46,7 @@ group :development, :test do
   gem 'byebug'
 
   gem 'webmock'
-  
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -68,6 +72,7 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'minitest-ci'
   gem 'poltergeist'
-  gem 'pg' # added to help load the db
+  gem 'pg'
+  gem 'rspec'# added to help load the db
 
 end
