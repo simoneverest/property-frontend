@@ -86,15 +86,17 @@ Then(/^a message is shown in place of the map section$/) do
   expect(map_unavailable.text).to eq ("No map available")
 end
 
+#this checks that there is a link and it is named correct on the page
 Then(/^a hyperlink to LR statutory services should be available$/) do
   @link = page.find('//*[@id="content"]/div[2]/p/a')
-  expect(@link.text).to eq ("Click here to go to the Land Registry page")
+  expect(@link.text).to eq ("here")
 end
 
 When(/^I click the LR Statutory services link$/) do
   #do nothing
 end
 
+#this checks that the link points to the correct page
 Then(/^I am taken to the Find a Property service$/) do
   expect(@link["href"]).to eq("https://www.gov.uk/search-property-information-land-registry")
 end
