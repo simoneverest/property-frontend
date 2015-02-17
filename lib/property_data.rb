@@ -41,18 +41,15 @@ class PropertyData
   end
 
   def format_address(property_json)
-    saon = property_json["saon"]
-    paon_street = ["paon", "street"].map do |key|
-      property_json[key]
-    end.compact.join(" ")
+    saon = capitalise_if_exists(property_json["saon"])
+    paon = property_json["paon"]
+    street = capitalise_if_exists(property_json["street"])
+    paon_street = [paon, street].compact.join(" ")
     rest_of_address = ["town", "county"].map do |key|
-      property_json[key]
+      capitalise_if_exists(property_json[key])
     end
     address_lines = ([saon, paon_street] + rest_of_address).compact
-    capitalised_lines = address_lines.map do |address_line|
-      NameCase(address_line)
-    end
-    capitalised_lines + [property_json["postcode"]]
+    address_lines + [property_json["postcode"]]
   end
 
   def format_ppi(property_json)
@@ -63,6 +60,10 @@ class PropertyData
     else
       unavailable_data
     end
+  end
+
+  def capitalise_if_exists(string)
+    NameCase(string) if string
   end
 
 end
