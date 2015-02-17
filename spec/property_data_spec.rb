@@ -28,7 +28,8 @@ describe PropertyData do
 
   let(:complicated_caps) {
     {
-      "street" => "53 MCDONALDS O'BRIEN VON STREIT MACDONALDS DE LA TOUR DI CAPRIO ST. JOHN STREET",
+      "paon" => "2D",
+      "street" => "MCDONALDS O'BRIEN VON STREIT MACDONALDS DE LA TOUR DI CAPRIO ST. JOHN STREET",
       "town" => "PLYMOUTH",
       "postcode" => "PL3 7TH"
     }
@@ -127,7 +128,7 @@ describe PropertyData do
       result = property_data.find(postcode, address_string)
       expect(result[:address]).to eq(
         [
-          "53 McDonalds O'Brien von Streit MacDonalds de la Tour di Caprio St. John Street",
+          "2D McDonalds O'Brien von Streit MacDonalds de la Tour di Caprio St. John Street",
           "Plymouth",
           "PL3 7TH"
         ]

@@ -8,7 +8,7 @@ class PropertiesControllerTest < ActionController::TestCase
       assert_response :success
       assert_template :application
       property = assigns(:property)
-      assert_equal ["Saon Goes Here", "Paon Goes Here Street Goes Here", "Town Goes Here", "County Goes Here", "postcode goes here"], property[:address]
+      assert_equal ["Saon Goes Here", "paon goes here Street Goes Here", "Town Goes Here", "County Goes Here", "postcode goes here"], property[:address]
       assert_equal "Terraced", property[:property_type]
       assert_equal "£107,500 on 30 September 2010", property[:price_paid_info]
       assert_equal 99, property[:coordinates][:latitude]
