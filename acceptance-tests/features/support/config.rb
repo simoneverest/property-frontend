@@ -1,6 +1,8 @@
 require 'net/https'
 require 'capybara/cucumber'
-require 'pg'
+require 'elasticsearch'
+
+ENV['ELASTIC_SEARCH_ENDPOINT']='http://localhost:9200'
 
 ### Allows you to use the page. commands
 include Capybara::DSL
@@ -25,12 +27,6 @@ end
 #This removes the referer for the map tiles to be returned
 page.driver.add_header("Referer", "", permanent: true)
 
-### Reads the basic auth username and password from env settings
-$http_auth_name = (ENV['HTTPAUTH_USERNAME'] || '')
-$http_auth_password = (ENV['HTTPAUTH_PASSWORD'] || '')
-
-$db_connection = PG::Connection.open(
-  :dbname => 'pubdata',
-  :user => 'postgres',
-  :password => 'password'
-)
+require 'pry'
+binding.pry
+$es_client = Elasticsearch::Client.new log: true

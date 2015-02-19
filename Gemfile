@@ -73,4 +73,5 @@ group :development, :test do
   gem 'minitest-ci'
   gem 'poltergeist'
   gem 'rspec'
+  gem 'elasticsearch'
 end

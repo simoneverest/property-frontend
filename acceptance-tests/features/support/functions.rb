@@ -9,14 +9,12 @@ def create_property_in_elasticsearch(prop_data)
   postcode = prop_data['address']['postcode']
   position_x = prop_data['address']['position_x']
   position_y = prop_data['address']['position_y']
-
-# this is the sql that will insert test data
-# some values we don't care about are hard coded
-# other values are passed as variable like this #{house_number}
-  #TODO: create an elasticsearch index
+  p $es_client.inspect
+  # this is the call to elastic search to insert test data
+  $es_client.index index: 'TODO', type: 'TODO', id: 1, body: { todo: 'TODO' }
 end
 
 # connect to the database and execute the sql (that deletes everything)
 def delete_all_properties
-  #TODO: delete all elasticsearch content
+  $es_client.delete index: 'TODO', type: 'TODO', id: '1'
 end
