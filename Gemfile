@@ -72,7 +72,5 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'minitest-ci'
   gem 'poltergeist'
-  gem 'pg'
-  gem 'rspec'# added to help load the db
-
+  gem 'rspec'
 end
