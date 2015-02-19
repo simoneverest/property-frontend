@@ -15,7 +15,7 @@ Given(/^I have a property$/) do
 # calls a function to get rid of existing data to remove chance of duplicate rows
   delete_all_properties
 # call the function that will insert our hash data into the database
-  res = create_property_in_db($property_data)
+  res = create_property_in_elasticsearch($property_data)
 end
 
 # go the url that is the property front -
