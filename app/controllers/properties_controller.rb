@@ -21,4 +21,8 @@ class PropertiesController < ApplicationController
   def postcode_index
 
   end
+
+  def copyright_notices
+
+  end
 end
