@@ -1,8 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.property_title_api_url = "ENV['PROPERTY_API']"
-
+  config.property_title_api_url = ENV['PROPERTY_API']
+  config.use_static_content = false
+  
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -76,6 +77,4 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
 end
