@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'properties/copyright_notices' => 'properties#copyright_notices'
+
   get 'properties/:postcode/:address_string' => 'properties#show'
 
   get 'properties/:postcode' => 'properties#postcode_index'
