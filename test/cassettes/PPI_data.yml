@@ -30,10 +30,11 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
+          "property": {
           "amount": "107500",
           "coordinates": {
-          "latitude": 99,
-          "longitude": 99
+          "x": 99,
+          "y": 99
           },
           "county": "county goes here",
           "date": "2010-09-30",
@@ -43,6 +44,7 @@ http_interactions:
           "saon": "saon goes here",
           "street": "street goes here",
           "town": "town goes here"
+          }
         }
     http_version:
   recorded_at: Thu, 05 Feb 2015 13:07:27 GMT

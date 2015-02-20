@@ -11,7 +11,7 @@ class PropertyData
   def find(postcode, address_string)
     property_json = get_property_json(postcode, address_string)
     unless property_json["message"] == "No record found."
-      format_property_json(property_json)
+      format_property_json(property_json["property"])
     end
   end
 
@@ -34,8 +34,8 @@ class PropertyData
       :price_paid_info => format_ppi(property_json)
     }
     # If coordinates are returned from the API then put these into address_hash
-    if coordinates && coordinates["latitude"] && coordinates["longitude"]
-      address_hash[:coordinates] = {:latitude => coordinates["latitude"], :longitude => coordinates["longitude"]}
+    if coordinates && coordinates["x"] && coordinates["y"]
+      address_hash[:coordinates] = {:x => coordinates["x"], :y => coordinates["y"]}
     end
     address_hash
   end
