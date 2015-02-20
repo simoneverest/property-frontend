@@ -23,6 +23,10 @@ It will display all properties regardless of whether they have a title or not an
 
 6. For the cucumber tests to pass these needs to be run in the virtual dev environment available in the Land Registry    repository and labelled 'centos-dev-env'.  This will make sure that all services needed for the acceptance tests are running.
 
+### Running the app on your local VM
+
+The app runs by default with production settings. For assets to display, please run: `bundle exec rake assets:precompile`. 
+
 ### Acceptance Tests
 
 Navigate to the acceptance test repository
