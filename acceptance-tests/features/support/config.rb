@@ -1,5 +1,6 @@
 require 'net/https'
 require 'capybara/cucumber'
+require 'elasticsearch'
 
 ### Allows you to use the page. commands
 include Capybara::DSL
