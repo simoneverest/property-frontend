@@ -5,50 +5,60 @@ describe PropertyData do
   let(:api_client) { double(:api_client, :get => full_json_data)}
   let(:full_json_data) {
     {
-      "paon" => "A",
-      "saon" => "B",
-      "street" => "Test Street",
-      "town" => "Plymouth",
-      "county" => "Devon",
-      "postcode" => "PL8 2JF",
-      "property_type" => "House",
-      "amount" => 25000,
-      "date" => "23-01-2009",
-      "coordinates" => {"latitude" => 23.6, "longitude" => 15.4}
+      "property" => {
+        "paon" => "A",
+        "saon" => "B",
+        "street" => "Test Street",
+        "town" => "Plymouth",
+        "county" => "Devon",
+        "postcode" => "PL8 2JF",
+        "property_type" => "House",
+        "amount" => 25000,
+        "date" => "23-01-2009",
+        "coordinates" => {"x" => 23.6, "y" => 15.4}
+      }
     }
   }
 
   let(:partial_json_data) {
     {
-      "street" => "Partial Street",
-      "town" => "Plymouth",
-      "postcode" => "PL3 7TH"
+      "property" => {
+        "street" => "Partial Street",
+        "town" => "Plymouth",
+        "postcode" => "PL3 7TH"
+      }
     }
   }
 
   let(:complicated_caps) {
     {
-      "paon" => "2D",
-      "street" => "MCDONALDS O'BRIEN VON STREIT MACDONALDS DE LA TOUR DI CAPRIO ST. JOHN STREET",
-      "town" => "PLYMOUTH",
-      "postcode" => "PL3 7TH"
+      "property" => {
+        "paon" => "2D",
+        "street" => "MCDONALDS O'BRIEN VON STREIT MACDONALDS DE LA TOUR DI CAPRIO ST. JOHN STREET",
+        "town" => "PLYMOUTH",
+        "postcode" => "PL3 7TH"
+      }
     }
   }
 
   let(:no_amount_ppi) {
      {
-       "county" => "Devon",
-       "postcode" => "PL8 2JF",
-       "property type" => "House",
-       "date" => "23-01-2009",
+       "property" => {
+         "county" => "Devon",
+         "postcode" => "PL8 2JF",
+         "property type" => "House",
+         "date" => "23-01-2009",
+       }
      }
    }
    let(:no_date_ppi) {
       {
-        "county" => "Devon",
-        "postcode" => "PL8 2JF",
-        "property type" => "House",
-        "amount" => 25000,
+        "property" => {
+          "county" => "Devon",
+          "postcode" => "PL8 2JF",
+          "property type" => "House",
+          "amount" => 25000,
+        }
       }
   }
   let(:postcode) { "PL9 8TB" }
