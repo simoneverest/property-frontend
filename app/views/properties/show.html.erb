@@ -38,8 +38,8 @@
 
         <div class="column-half map-placeholder">
           <% if @property[:coordinates] %>
-            <% latitude = @property[:coordinates][:latitude]
-               longitude = @property[:coordinates][:longitude]
+            <% latitude = @property[:coordinates][:lat]
+               longitude = @property[:coordinates][:lon]
             %>
             <img src="http://maps.google.com/maps/api/staticmap?markers=<%=latitude%>,<%=longitude%>|<%=latitude%>,<%=longitude%>&zoom=17&size=500x400">
           <% else %>

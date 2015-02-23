@@ -11,8 +11,8 @@ class PropertiesControllerTest < ActionController::TestCase
       assert_equal ["Saon Goes Here", "paon goes here Street Goes Here", "Town Goes Here", "County Goes Here", "postcode goes here"], property[:address]
       assert_equal "Terraced", property[:property_type]
       assert_equal "£107,500 on 30 September 2010", property[:price_paid_info]
-      assert_equal 99, property[:coordinates][:x]
-      assert_equal 99, property[:coordinates][:y]
+      assert_equal 49.76777255560833, property[:coordinates][:lat]
+      assert_equal -7.555882735441865, property[:coordinates][:lon]
     end
   end
 
