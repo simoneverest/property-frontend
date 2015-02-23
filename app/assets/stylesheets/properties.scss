@@ -88,3 +88,11 @@
       clear: both;
     }
 }
+
+ol {
+  list-style-type: decimal;
+}
+
+ol.lower-roman {
+  list-style-type: lower-roman;
+}
