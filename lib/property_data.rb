@@ -1,8 +1,10 @@
 require 'open-uri'
 require 'action_view'
 require 'namecase'
+require 'osgb36'
 
 class PropertyData
+  include OSGB36
 
   def initialize(api_client)
     @api_client = api_client
@@ -35,7 +37,10 @@ class PropertyData
     }
     # If coordinates are returned from the API then put these into address_hash
     if coordinates && coordinates["x"] && coordinates["y"]
-      address_hash[:coordinates] = {:x => coordinates["x"], :y => coordinates["y"]}
+      easting = coordinates["x"]
+      northing = coordinates["y"]
+      location = OSGB36.en_to_ll(easting,northing)
+      address_hash[:coordinates] = {:lat => location[:latitude], :lon => location[:longitude]}
     end
     address_hash
   end
