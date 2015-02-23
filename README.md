@@ -1,7 +1,7 @@
 Property-Frontend README
 ===============
 
-[![Build Status](http://54.72.23.130/job/property-frontend-unit-tests/badge/icon)](http://54.72.23.130/job/property-frontend-unit-tests/)
+[![Build Status](http://54.72.23.130/job/property-frontend-unit-tests%20(Master)/badge/icon)](http://54.72.23.130/job/property-frontend-unit-tests%20(Master)/)
 
 This is the frontend system which displays properties for the Land Registry.
 
