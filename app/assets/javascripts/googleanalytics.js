@@ -9,6 +9,9 @@ ga('create', 'UA-59849906-1', 'auto');
 // for localhost testing uncomment the below line
 // ga('create', 'UA-59849906-1',{'cookieDomain': 'none'});
 
+// Hide the IP to comply with any DPA agreements
+ga('set', 'anonymizeIp', true);
+
 // send an initial pageview event for logging
 ga('send', 'pageview');
 
