@@ -10,7 +10,7 @@ It will display all properties regardless of whether they have a title or not an
 1. This application for development currently runs on the centos-dev-env and it needs access to the property-api to run.
    To run the application locally use the command `rails s` to start up a local webrick server.
    A good starting point to view the application would be :
-   [BASE_URL]/properties/PL9%208TB.
+   [BASE_URL]/property/PL9%208TB.
 
 
 2. It uses Ruby Version 2.1 and Rails Version 4.2.

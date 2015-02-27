@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'properties/copyright_notices' => 'properties#copyright_notices'
+  get 'property/copyright_notices' => 'properties#copyright_notices'
 
-  get 'properties/:postcode/:address_string' => 'properties#show'
+  get 'property/:postcode/:address_string' => 'properties#show'
 
-  get 'properties/:postcode' => 'properties#postcode_index'
+  get 'property/:postcode' => 'properties#postcode_index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
