@@ -25,7 +25,7 @@ end
 When(/^I view the property detail page$/) do
   postcode = @property_data['postcode'].gsub(" ", "_")
   address_string = @property_data['address_string']
-  visit("http://landregistry.local:8000/properties/#{postcode}/#{address_string}")
+  visit("http://landregistry.local:8000/property/#{postcode}/#{address_string}")
 end
 
 # then look for an xpath, assigning the value in to a var
